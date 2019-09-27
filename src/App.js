@@ -17,7 +17,7 @@ class App extends React.Component {
          data: { movies }
       }
     } = await axios.get(
-      "https://yts-proxy.now.sh/list_movies.json?sort_by=rating"
+      "https://yts-proxy.now.sh/list_movies.json?sort_by=like_count&limit=50"
     );
     // state-> movies:movies <- axios에서 가져온 moives임
     this.setState({ movies, isLoading: false });
